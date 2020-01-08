@@ -131,6 +131,14 @@
 			<attribute name="javadoc_location" value="file:/Applications/Katalon%20Studio.app/Contents/Eclipse/configuration/resources/apidocs/com.kms.katalon.core.windows/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/urayamakazuaki/katalon-workspace/HowToEnableVisualTesting/Drivers/VT-ksbackyard.jar"/>
+	<classpathentry kind="lib" path="/Users/urayamakazuaki/katalon-workspace/HowToEnableVisualTesting/Drivers/VT-thumbnailator-0.4.8.jar"/>
+	<classpathentry kind="lib" path="/Users/urayamakazuaki/katalon-workspace/HowToEnableVisualTesting/Drivers/VT-Materials-0.73.2.jar"/>
+	<classpathentry kind="lib" path="/Users/urayamakazuaki/katalon-workspace/HowToEnableVisualTesting/Drivers/VT-ashot-1.5.4.jar"/>
+	<classpathentry kind="lib" path="/Users/urayamakazuaki/katalon-workspace/HowToEnableVisualTesting/Drivers/VT-commons-math3-3.6.1.jar"/>
+	<classpathentry kind="lib" path="/Users/urayamakazuaki/katalon-workspace/HowToEnableVisualTesting/Drivers/VT-junit4ks-all.jar"/>
+	<classpathentry kind="lib" path="/Users/urayamakazuaki/katalon-workspace/HowToEnableVisualTesting/Drivers/VT-espionagekeyword-0.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/urayamakazuaki/katalon-workspace/HowToEnableVisualTesting/Drivers/VT-commons-lang3-3.6.jar"/>
 	<classpathentry kind="lib" path="/Applications/Katalon Studio.app/Contents/Eclipse/configuration/plugin/install/11006/1.0.2/ExcelKeywords.jar"/>
 	<classpathentry kind="lib" path="/Applications/Katalon Studio.app/Contents/Eclipse/configuration/plugin/install/6584/1.0.7/katalon-studio-report-plugin.jar"/>
 	<classpathentry kind="lib" path="/Applications/Katalon Studio.app/Contents/Eclipse/configuration/plugin/install/20941/1.0.1/katalon-studio-htmltable-custom-keywords-plugin.jar"/>
