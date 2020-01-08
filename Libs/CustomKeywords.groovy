@@ -19,6 +19,8 @@ import org.apache.poi.ss.usermodel.Cell
 
 import org.apache.poi.ss.usermodel.Row
 
+import com.kms.katalon.core.testobject.TestObject
+
 import com.kms.katalon.core.model.FailureHandling
 
 import org.openqa.selenium.WebElement
@@ -348,6 +350,24 @@ def static "com.kms.katalon.keyword.excel.ExcelKeywords.compareTwoCells"(
          , 	cell2)
 }
 
+def static "com.kazurayam.visualtesting.Helpers.refreshBrowser"() {
+    (new com.kazurayam.visualtesting.Helpers()).refreshBrowser()
+}
+
+def static "com.kazurayam.visualtesting.Helpers.clickElement"(
+    	TestObject to	) {
+    (new com.kazurayam.visualtesting.Helpers()).clickElement(
+        	to)
+}
+
+def static "com.kazurayam.visualtesting.Helpers.getHtmlTableRows"(
+    	TestObject table	
+     , 	String outerTagName	) {
+    (new com.kazurayam.visualtesting.Helpers()).getHtmlTableRows(
+        	table
+         , 	outerTagName)
+}
+
 def static "kms.turing.katalon.plugins.assertj.NumberAssert.isNegative"(
     	Object value	
      , 	String description	
@@ -534,278 +554,40 @@ def static "kms.turing.katalon.plugins.assertj.NumberAssert.greaterThanOrEqual"(
          , 	flowControl)
 }
 
-def static "kms.turing.katalon.plugins.assertj.StringAssert.equals"(
-    	String actual	
-     , 	String expected	
-     , 	boolean caseSensitive	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).equals(
-        	actual
-         , 	expected
-         , 	caseSensitive
-         , 	description
-         , 	flowControl)
+def static "com.kazurayam.visualtesting.Downloader.refreshBrowser"() {
+    (new com.kazurayam.visualtesting.Downloader()).refreshBrowser()
 }
 
-def static "kms.turing.katalon.plugins.assertj.StringAssert.equals"(
-    	String actual	
-     , 	String expected	
-     , 	boolean caseSensitive	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).equals(
-        	actual
-         , 	expected
-         , 	caseSensitive
-         , 	description)
+def static "com.kazurayam.visualtesting.Downloader.clickElement"(
+    	TestObject to	) {
+    (new com.kazurayam.visualtesting.Downloader()).clickElement(
+        	to)
 }
 
-def static "kms.turing.katalon.plugins.assertj.StringAssert.equals"(
-    	String actual	
-     , 	String expected	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).equals(
-        	actual
-         , 	expected
-         , 	description)
+def static "com.kazurayam.visualtesting.Downloader.getHtmlTableRows"(
+    	TestObject table	
+     , 	String outerTagName	) {
+    (new com.kazurayam.visualtesting.Downloader()).getHtmlTableRows(
+        	table
+         , 	outerTagName)
 }
 
-def static "kms.turing.katalon.plugins.assertj.StringAssert.startsWith"(
-    	String text	
-     , 	String prefix	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).startsWith(
-        	text
-         , 	prefix
-         , 	description)
+def static "com.kazurayam.visualtesting.Downloader.verifyStatusCode"(
+    	TestObject request	
+     , 	int expectedStatusCode	) {
+    (new com.kazurayam.visualtesting.Downloader()).verifyStatusCode(
+        	request
+         , 	expectedStatusCode)
 }
 
-def static "kms.turing.katalon.plugins.assertj.StringAssert.startsWith"(
-    	String text	
-     , 	String prefix	
-     , 	boolean caseSensitive	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).startsWith(
-        	text
-         , 	prefix
-         , 	caseSensitive
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.startsWith"(
-    	String text	
-     , 	String prefix	
-     , 	boolean caseSensitive	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).startsWith(
-        	text
-         , 	prefix
-         , 	caseSensitive
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.endsWith"(
-    	String text	
-     , 	String suffix	
-     , 	boolean caseSensitive	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).endsWith(
-        	text
-         , 	suffix
-         , 	caseSensitive
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.endsWith"(
-    	String text	
-     , 	String suffix	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).endsWith(
-        	text
-         , 	suffix
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.endsWith"(
-    	String text	
-     , 	String suffix	
-     , 	boolean caseSensitive	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).endsWith(
-        	text
-         , 	suffix
-         , 	caseSensitive
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.matches"(
-    	String text	
-     , 	String pattern	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).matches(
-        	text
-         , 	pattern
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.matches"(
-    	String text	
-     , 	String pattern	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).matches(
-        	text
-         , 	pattern
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.contains"(
-    	String text	
-     , 	String subText	
-     , 	boolean caseSensitive	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).contains(
-        	text
-         , 	subText
-         , 	caseSensitive
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.contains"(
-    	String text	
-     , 	String subText	
-     , 	boolean caseSensitive	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).contains(
-        	text
-         , 	subText
-         , 	caseSensitive
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.contains"(
-    	String text	
-     , 	String subText	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).contains(
-        	text
-         , 	subText
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
-    	String actual	
-     , 	String expected	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).notEqual(
-        	actual
-         , 	expected
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
-    	String actual	
-     , 	String expected	
-     , 	boolean caseSensitive	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).notEqual(
-        	actual
-         , 	expected
-         , 	caseSensitive
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
-    	String actual	
-     , 	String expected	
-     , 	boolean caseSensitive	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).notEqual(
-        	actual
-         , 	expected
-         , 	caseSensitive
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
-    	String text	
-     , 	String subText	
-     , 	boolean caseSensitive	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).notContain(
-        	text
-         , 	subText
-         , 	caseSensitive
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
-    	String text	
-     , 	String subText	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).notContain(
-        	text
-         , 	subText
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
-    	String text	
-     , 	String subText	
-     , 	boolean caseSensitive	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).notContain(
-        	text
-         , 	subText
-         , 	caseSensitive
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isTrue"(
-    	boolean expression	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isTrue(
-        	expression
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isTrue"(
-    	boolean expression	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isTrue(
-        	expression
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isFalse"(
-    	boolean expression	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isFalse(
-        	expression
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isFalse"(
-    	boolean expression	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isFalse(
-        	expression
-         , 	description)
+def static "com.kazurayam.visualtesting.Downloader.addBasicAuthorizationProperty"(
+    	TestObject request	
+     , 	String username	
+     , 	String password	) {
+    (new com.kazurayam.visualtesting.Downloader()).addBasicAuthorizationProperty(
+        	request
+         , 	username
+         , 	password)
 }
 
 def static "kms.turing.katalon.plugins.assertj.DateTimeAssert.isAfter"(
@@ -1190,6 +972,280 @@ def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.clickOnColum
     (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).clickOnColumn(
         	table
          , 	columnHeader)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.equals"(
+    	String actual	
+     , 	String expected	
+     , 	boolean caseSensitive	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).equals(
+        	actual
+         , 	expected
+         , 	caseSensitive
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.equals"(
+    	String actual	
+     , 	String expected	
+     , 	boolean caseSensitive	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).equals(
+        	actual
+         , 	expected
+         , 	caseSensitive
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.equals"(
+    	String actual	
+     , 	String expected	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).equals(
+        	actual
+         , 	expected
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.startsWith"(
+    	String text	
+     , 	String prefix	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).startsWith(
+        	text
+         , 	prefix
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.startsWith"(
+    	String text	
+     , 	String prefix	
+     , 	boolean caseSensitive	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).startsWith(
+        	text
+         , 	prefix
+         , 	caseSensitive
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.startsWith"(
+    	String text	
+     , 	String prefix	
+     , 	boolean caseSensitive	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).startsWith(
+        	text
+         , 	prefix
+         , 	caseSensitive
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.endsWith"(
+    	String text	
+     , 	String suffix	
+     , 	boolean caseSensitive	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).endsWith(
+        	text
+         , 	suffix
+         , 	caseSensitive
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.endsWith"(
+    	String text	
+     , 	String suffix	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).endsWith(
+        	text
+         , 	suffix
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.endsWith"(
+    	String text	
+     , 	String suffix	
+     , 	boolean caseSensitive	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).endsWith(
+        	text
+         , 	suffix
+         , 	caseSensitive
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.matches"(
+    	String text	
+     , 	String pattern	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).matches(
+        	text
+         , 	pattern
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.matches"(
+    	String text	
+     , 	String pattern	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).matches(
+        	text
+         , 	pattern
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.contains"(
+    	String text	
+     , 	String subText	
+     , 	boolean caseSensitive	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).contains(
+        	text
+         , 	subText
+         , 	caseSensitive
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.contains"(
+    	String text	
+     , 	String subText	
+     , 	boolean caseSensitive	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).contains(
+        	text
+         , 	subText
+         , 	caseSensitive
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.contains"(
+    	String text	
+     , 	String subText	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).contains(
+        	text
+         , 	subText
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
+    	String actual	
+     , 	String expected	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).notEqual(
+        	actual
+         , 	expected
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
+    	String actual	
+     , 	String expected	
+     , 	boolean caseSensitive	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).notEqual(
+        	actual
+         , 	expected
+         , 	caseSensitive
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
+    	String actual	
+     , 	String expected	
+     , 	boolean caseSensitive	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).notEqual(
+        	actual
+         , 	expected
+         , 	caseSensitive
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
+    	String text	
+     , 	String subText	
+     , 	boolean caseSensitive	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).notContain(
+        	text
+         , 	subText
+         , 	caseSensitive
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
+    	String text	
+     , 	String subText	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).notContain(
+        	text
+         , 	subText
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
+    	String text	
+     , 	String subText	
+     , 	boolean caseSensitive	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).notContain(
+        	text
+         , 	subText
+         , 	caseSensitive
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isTrue"(
+    	boolean expression	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isTrue(
+        	expression
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isTrue"(
+    	boolean expression	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isTrue(
+        	expression
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isFalse"(
+    	boolean expression	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isFalse(
+        	expression
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isFalse"(
+    	boolean expression	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isFalse(
+        	expression
+         , 	description)
 }
 
 def static "kms.turing.katalon.plugins.assertj.GenericAssert.isNull"(
