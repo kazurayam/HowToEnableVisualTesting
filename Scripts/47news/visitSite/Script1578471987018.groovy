@@ -17,7 +17,7 @@ WebUI.openBrowser('')
 WebUI.setViewPortSize(1280, 768)
 WebDriver driver = DriverFactory.getWebDriver()
 
-URL url = new URL("https://www.47news.jp/")
+URL url = new URL("https://www.47news.jp/sports")
 
 WebUI.navigateToUrl(url.toExternalForm())
 WebUI.delay(5)

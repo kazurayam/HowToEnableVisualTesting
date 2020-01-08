@@ -6,6 +6,7 @@
    <UUID>6fe0ff0b-f068-45dc-b3eb-32a78b9a6c9e</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+   <projectFileLocation>/Users/urayamakazuaki/katalon-workspace/HowToEnableVisualTesting/HowToEnableVisualTesting.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

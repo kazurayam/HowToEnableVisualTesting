@@ -3,8 +3,6 @@
    <description></description>
    <name>visitSite</name>
    <tag></tag>
-   <comment>*** GlobalVariable[$MGV.CURRENT_TESTSUITE_ID.getName()]=$GlobalVariable[MGV.CURRENT_TESTSUITE_ID.getName()]
-*** GlobalVariable[$MGV.CURRENT_TESTSUITE_TIMESTAMP.getName()]=$GlobalVariable[MGV.CURRENT_TESTSUITE_TIMESTAMP.getName()]
-saved image into $png1</comment>
+   <comment></comment>
    <testCaseGuid>ba5a7470-a13e-4045-9563-3a9ced14fd81</testCaseGuid>
 </TestCaseEntity>

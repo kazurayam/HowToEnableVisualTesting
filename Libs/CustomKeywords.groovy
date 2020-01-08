@@ -3,11 +3,11 @@
  * This class is generated automatically by Katalon Studio and should not be modified or deleted.
  */
 
+import java.lang.String
+
 import org.apache.poi.ss.usermodel.Sheet
 
 import java.util.Map
-
-import java.lang.String
 
 import org.apache.poi.ss.usermodel.Workbook
 
@@ -30,18 +30,10 @@ import kms.turing.katalon.plugins.helper.table.WebTableHelper.CellTextOptions
 import kms.turing.katalon.plugins.helper.XPathHelper.CompareOptions
 
 
-def static "com.kms.katalon.keyword.excel.ExcelKeywords.getCellValuesByRangeIndexes"(
-    	Sheet sheet	
-     , 	int rowInd1	
-     , 	int colInd1	
-     , 	int rowInd2	
-     , 	int colInd2	) {
-    (new com.kms.katalon.keyword.excel.ExcelKeywords()).getCellValuesByRangeIndexes(
-        	sheet
-         , 	rowInd1
-         , 	colInd1
-         , 	rowInd2
-         , 	colInd2)
+def static "com.kms.katalon.keyword.excel.ExcelKeywords.createExcelFile"(
+    	String filePath	) {
+    (new com.kms.katalon.keyword.excel.ExcelKeywords()).createExcelFile(
+        	filePath)
 }
 
 def static "com.kms.katalon.keyword.excel.ExcelKeywords.setValueToCellByAddresses"(
@@ -62,10 +54,18 @@ def static "com.kms.katalon.keyword.excel.ExcelKeywords.getCellValueByRangeAddre
          , 	rightBottomAddress)
 }
 
-def static "com.kms.katalon.keyword.excel.ExcelKeywords.getSheetNames"(
-    	Workbook workbook	) {
-    (new com.kms.katalon.keyword.excel.ExcelKeywords()).getSheetNames(
-        	workbook)
+def static "com.kms.katalon.keyword.excel.ExcelKeywords.getCellValuesByRangeIndexes"(
+    	Sheet sheet	
+     , 	int rowInd1	
+     , 	int colInd1	
+     , 	int rowInd2	
+     , 	int colInd2	) {
+    (new com.kms.katalon.keyword.excel.ExcelKeywords()).getCellValuesByRangeIndexes(
+        	sheet
+         , 	rowInd1
+         , 	colInd1
+         , 	rowInd2
+         , 	colInd2)
 }
 
 def static "com.kms.katalon.keyword.excel.ExcelKeywords.createExcelSheet"(
@@ -82,6 +82,12 @@ def static "com.kms.katalon.keyword.excel.ExcelKeywords.createExcelSheet"(
          , 	sheetName)
 }
 
+def static "com.kms.katalon.keyword.excel.ExcelKeywords.getSheetNames"(
+    	Workbook workbook	) {
+    (new com.kms.katalon.keyword.excel.ExcelKeywords()).getSheetNames(
+        	workbook)
+}
+
 def static "com.kms.katalon.keyword.excel.ExcelKeywords.createExcelSheets"(
     	Workbook workbook	
      , 	java.util.List<String> sheetNames	) {
@@ -96,9 +102,9 @@ def static "com.kms.katalon.keyword.excel.ExcelKeywords.getWorkbook"(
         	filePath)
 }
 
-def static "com.kms.katalon.keyword.excel.ExcelKeywords.createExcelFile"(
+def static "com.kms.katalon.keyword.excel.ExcelKeywords.createWorkbook"(
     	String filePath	) {
-    (new com.kms.katalon.keyword.excel.ExcelKeywords()).createExcelFile(
+    (new com.kms.katalon.keyword.excel.ExcelKeywords()).createWorkbook(
         	filePath)
 }
 
@@ -108,12 +114,6 @@ def static "com.kms.katalon.keyword.excel.ExcelKeywords.saveWorkbook"(
     (new com.kms.katalon.keyword.excel.ExcelKeywords()).saveWorkbook(
         	filePath
          , 	workbook)
-}
-
-def static "com.kms.katalon.keyword.excel.ExcelKeywords.createWorkbook"(
-    	String filePath	) {
-    (new com.kms.katalon.keyword.excel.ExcelKeywords()).createWorkbook(
-        	filePath)
 }
 
 def static "com.kms.katalon.keyword.excel.ExcelKeywords.setValueToCellByIndex"(
@@ -386,6 +386,24 @@ def static "kms.turing.katalon.plugins.assertj.NumberAssert.isNegative"(
          , 	description)
 }
 
+def static "kms.turing.katalon.plugins.assertj.NumberAssert.isPositive"(
+    	Object value	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.NumberAssert()).isPositive(
+        	value
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.NumberAssert.isPositive"(
+    	Object value	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.NumberAssert()).isPositive(
+        	value
+         , 	description
+         , 	flowControl)
+}
+
 def static "kms.turing.katalon.plugins.assertj.NumberAssert.isZero"(
     	Object value	
      , 	String description	) {
@@ -407,106 +425,22 @@ def static "kms.turing.katalon.plugins.assertj.NumberAssert.isZero"(
 def static "kms.turing.katalon.plugins.assertj.NumberAssert.equals"(
     	Object actual	
      , 	Object expected	
-     , 	String description	) {
+     , 	String description	
+     , 	FailureHandling flowControl	) {
     (new kms.turing.katalon.plugins.assertj.NumberAssert()).equals(
         	actual
          , 	expected
-         , 	description)
+         , 	description
+         , 	flowControl)
 }
 
 def static "kms.turing.katalon.plugins.assertj.NumberAssert.equals"(
     	Object actual	
      , 	Object expected	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
+     , 	String description	) {
     (new kms.turing.katalon.plugins.assertj.NumberAssert()).equals(
         	actual
          , 	expected
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.NumberAssert.isPositive"(
-    	Object value	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.NumberAssert()).isPositive(
-        	value
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.NumberAssert.isPositive"(
-    	Object value	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.NumberAssert()).isPositive(
-        	value
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.NumberAssert.notEqual"(
-    	Object actual	
-     , 	Object expected	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.NumberAssert()).notEqual(
-        	actual
-         , 	expected
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.NumberAssert.notEqual"(
-    	Object actual	
-     , 	Object expected	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.NumberAssert()).notEqual(
-        	actual
-         , 	expected
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.NumberAssert.lessThan"(
-    	Object x	
-     , 	Object y	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.NumberAssert()).lessThan(
-        	x
-         , 	y
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.NumberAssert.lessThan"(
-    	Object x	
-     , 	Object y	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.NumberAssert()).lessThan(
-        	x
-         , 	y
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.NumberAssert.greaterThan"(
-    	Object x	
-     , 	Object y	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.assertj.NumberAssert()).greaterThan(
-        	x
-         , 	y
-         , 	description
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.NumberAssert.greaterThan"(
-    	Object x	
-     , 	Object y	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.NumberAssert()).greaterThan(
-        	x
-         , 	y
          , 	description)
 }
 
@@ -548,6 +482,72 @@ def static "kms.turing.katalon.plugins.assertj.NumberAssert.greaterThanOrEqual"(
      , 	String description	
      , 	FailureHandling flowControl	) {
     (new kms.turing.katalon.plugins.assertj.NumberAssert()).greaterThanOrEqual(
+        	x
+         , 	y
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.NumberAssert.lessThan"(
+    	Object x	
+     , 	Object y	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.NumberAssert()).lessThan(
+        	x
+         , 	y
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.NumberAssert.lessThan"(
+    	Object x	
+     , 	Object y	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.NumberAssert()).lessThan(
+        	x
+         , 	y
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.NumberAssert.notEqual"(
+    	Object actual	
+     , 	Object expected	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.NumberAssert()).notEqual(
+        	actual
+         , 	expected
+         , 	description
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.NumberAssert.notEqual"(
+    	Object actual	
+     , 	Object expected	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.NumberAssert()).notEqual(
+        	actual
+         , 	expected
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.NumberAssert.greaterThan"(
+    	Object x	
+     , 	Object y	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.NumberAssert()).greaterThan(
+        	x
+         , 	y
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.NumberAssert.greaterThan"(
+    	Object x	
+     , 	Object y	
+     , 	String description	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.assertj.NumberAssert()).greaterThan(
         	x
          , 	y
          , 	description
@@ -720,28 +720,6 @@ def static "kms.turing.katalon.plugins.assertj.DateTimeAssert.matchesDateTimeFor
          , 	description)
 }
 
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByValueAndColHeader"(
-    	WebElement table	
-     , 	String columnHeader	
-     , 	String cellValue	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).identifyCellByValueAndColHeader(
-        	table
-         , 	columnHeader
-         , 	cellValue
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByValueAndColHeader"(
-    	WebElement table	
-     , 	String columnHeader	
-     , 	String cellValue	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).identifyCellByValueAndColHeader(
-        	table
-         , 	columnHeader
-         , 	cellValue)
-}
-
 def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyTableByColumnHeaders"(
     	java.util.List<String> columnHeaders	
      , 	int timeout	) {
@@ -766,6 +744,66 @@ def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyTabl
         	columnHeaders)
 }
 
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByValueAndColHeader"(
+    	WebElement table	
+     , 	String columnHeader	
+     , 	String cellValue	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).identifyCellByValueAndColHeader(
+        	table
+         , 	columnHeader
+         , 	cellValue
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByValueAndColHeader"(
+    	WebElement table	
+     , 	String columnHeader	
+     , 	String cellValue	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).identifyCellByValueAndColHeader(
+        	table
+         , 	columnHeader
+         , 	cellValue)
+}
+
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getColumnIndexByAttribute"(
+    	WebElement table	
+     , 	String attribute	
+     , 	String value	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).getColumnIndexByAttribute(
+        	table
+         , 	attribute
+         , 	value
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getColumnIndexByAttribute"(
+    	WebElement table	
+     , 	String attribute	
+     , 	String value	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).getColumnIndexByAttribute(
+        	table
+         , 	attribute
+         , 	value)
+}
+
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyCellPresentWithText"(
+    	WebElement table	
+     , 	String columnHeader	
+     , 	String text	
+     , 	CellTextOptions textOption	
+     , 	CompareOptions compareOption	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).verifyCellPresentWithText(
+        	table
+         , 	columnHeader
+         , 	text
+         , 	textOption
+         , 	compareOption
+         , 	flowControl)
+}
+
 def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyCellPresentWithText"(
     	WebElement table	
      , 	String columnHeader	
@@ -774,18 +812,6 @@ def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyCellPr
         	table
          , 	columnHeader
          , 	text)
-}
-
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyCellPresentWithText"(
-    	WebElement table	
-     , 	String columnHeader	
-     , 	String text	
-     , 	CellTextOptions textOption	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).verifyCellPresentWithText(
-        	table
-         , 	columnHeader
-         , 	text
-         , 	textOption)
 }
 
 def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyCellPresentWithText"(
@@ -806,26 +832,34 @@ def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyCellPr
     	WebElement table	
      , 	String columnHeader	
      , 	String text	
-     , 	CellTextOptions textOption	
-     , 	CompareOptions compareOption	
-     , 	FailureHandling flowControl	) {
+     , 	CellTextOptions textOption	) {
     (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).verifyCellPresentWithText(
         	table
          , 	columnHeader
          , 	text
-         , 	textOption
-         , 	compareOption
+         , 	textOption)
+}
+
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByHeaderAndCellsInfo"(
+    	WebElement table	
+     , 	String columnHeader	
+     , 	Map cellsInfo	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).identifyCellByHeaderAndCellsInfo(
+        	table
+         , 	columnHeader
+         , 	cellsInfo
          , 	flowControl)
 }
 
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getCellsValueByColumnHeader"(
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByHeaderAndCellsInfo"(
     	WebElement table	
      , 	String columnHeader	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).getCellsValueByColumnHeader(
+     , 	Map cellsInfo	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).identifyCellByHeaderAndCellsInfo(
         	table
          , 	columnHeader
-         , 	flowControl)
+         , 	cellsInfo)
 }
 
 def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getCellsValueByColumnHeader"(
@@ -836,56 +870,14 @@ def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getCellsValu
          , 	columnHeader)
 }
 
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByHeaderAndCellsInfo"(
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getCellsValueByColumnHeader"(
     	WebElement table	
      , 	String columnHeader	
-     , 	Map cellsInfo	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).identifyCellByHeaderAndCellsInfo(
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).getCellsValueByColumnHeader(
         	table
          , 	columnHeader
-         , 	cellsInfo)
-}
-
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByHeaderAndCellsInfo"(
-    	WebElement table	
-     , 	String columnHeader	
-     , 	Map cellsInfo	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).identifyCellByHeaderAndCellsInfo(
-        	table
-         , 	columnHeader
-         , 	cellsInfo
          , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getColumnIndexByAttribute"(
-    	WebElement table	
-     , 	String attribute	
-     , 	String value	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).getColumnIndexByAttribute(
-        	table
-         , 	attribute
-         , 	value)
-}
-
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getColumnIndexByAttribute"(
-    	WebElement table	
-     , 	String attribute	
-     , 	String value	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).getColumnIndexByAttribute(
-        	table
-         , 	attribute
-         , 	value
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyRowDisplayed"(
-    	WebElement table	
-     , 	Map cellsInfo	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).verifyRowDisplayed(
-        	table
-         , 	cellsInfo)
 }
 
 def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyRowDisplayed"(
@@ -896,6 +888,14 @@ def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyRowDis
         	table
          , 	cellsInfo
          , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyRowDisplayed"(
+    	WebElement table	
+     , 	Map cellsInfo	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).verifyRowDisplayed(
+        	table
+         , 	cellsInfo)
 }
 
 def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getColumnIndexByHeader"(
@@ -916,22 +916,14 @@ def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getColumnInd
          , 	columnHeader)
 }
 
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getRowIndexByCellsInfo"(
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByIndexes"(
     	WebElement table	
-     , 	Map cellsInfo	
-     , 	FailureHandling flowControl	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).getRowIndexByCellsInfo(
+     , 	int columnIndex	
+     , 	int rowIndex	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).identifyCellByIndexes(
         	table
-         , 	cellsInfo
-         , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getRowIndexByCellsInfo"(
-    	WebElement table	
-     , 	Map cellsInfo	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).getRowIndexByCellsInfo(
-        	table
-         , 	cellsInfo)
+         , 	columnIndex
+         , 	rowIndex)
 }
 
 def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByIndexes"(
@@ -946,14 +938,30 @@ def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCell
          , 	flowControl)
 }
 
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyCellByIndexes"(
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getRowIndexByCellsInfo"(
     	WebElement table	
-     , 	int columnIndex	
-     , 	int rowIndex	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).identifyCellByIndexes(
+     , 	Map cellsInfo	
+     , 	FailureHandling flowControl	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).getRowIndexByCellsInfo(
         	table
-         , 	columnIndex
-         , 	rowIndex)
+         , 	cellsInfo
+         , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.getRowIndexByCellsInfo"(
+    	WebElement table	
+     , 	Map cellsInfo	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).getRowIndexByCellsInfo(
+        	table
+         , 	cellsInfo)
+}
+
+def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.clickOnColumn"(
+    	WebElement table	
+     , 	String columnHeader	) {
+    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).clickOnColumn(
+        	table
+         , 	columnHeader)
 }
 
 def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.clickOnColumn"(
@@ -966,14 +974,6 @@ def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.clickOnColum
          , 	flowControl)
 }
 
-def static "kms.turing.katalon.plugins.helper.table.HTMLTableHelper.clickOnColumn"(
-    	WebElement table	
-     , 	String columnHeader	) {
-    (new kms.turing.katalon.plugins.helper.table.HTMLTableHelper()).clickOnColumn(
-        	table
-         , 	columnHeader)
-}
-
 def static "kms.turing.katalon.plugins.assertj.StringAssert.equals"(
     	String actual	
      , 	String expected	
@@ -1013,10 +1013,12 @@ def static "kms.turing.katalon.plugins.assertj.StringAssert.equals"(
 def static "kms.turing.katalon.plugins.assertj.StringAssert.startsWith"(
     	String text	
      , 	String prefix	
+     , 	boolean caseSensitive	
      , 	String description	) {
     (new kms.turing.katalon.plugins.assertj.StringAssert()).startsWith(
         	text
          , 	prefix
+         , 	caseSensitive
          , 	description)
 }
 
@@ -1037,12 +1039,10 @@ def static "kms.turing.katalon.plugins.assertj.StringAssert.startsWith"(
 def static "kms.turing.katalon.plugins.assertj.StringAssert.startsWith"(
     	String text	
      , 	String prefix	
-     , 	boolean caseSensitive	
      , 	String description	) {
     (new kms.turing.katalon.plugins.assertj.StringAssert()).startsWith(
         	text
          , 	prefix
-         , 	caseSensitive
          , 	description)
 }
 
@@ -1085,23 +1085,33 @@ def static "kms.turing.katalon.plugins.assertj.StringAssert.endsWith"(
 def static "kms.turing.katalon.plugins.assertj.StringAssert.matches"(
     	String text	
      , 	String pattern	
-     , 	String description	) {
+     , 	String description	
+     , 	FailureHandling flowControl	) {
     (new kms.turing.katalon.plugins.assertj.StringAssert()).matches(
         	text
          , 	pattern
-         , 	description)
+         , 	description
+         , 	flowControl)
 }
 
 def static "kms.turing.katalon.plugins.assertj.StringAssert.matches"(
     	String text	
      , 	String pattern	
-     , 	String description	
-     , 	FailureHandling flowControl	) {
+     , 	String description	) {
     (new kms.turing.katalon.plugins.assertj.StringAssert()).matches(
         	text
          , 	pattern
-         , 	description
-         , 	flowControl)
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.contains"(
+    	String text	
+     , 	String subText	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).contains(
+        	text
+         , 	subText
+         , 	description)
 }
 
 def static "kms.turing.katalon.plugins.assertj.StringAssert.contains"(
@@ -1130,38 +1140,6 @@ def static "kms.turing.katalon.plugins.assertj.StringAssert.contains"(
          , 	description)
 }
 
-def static "kms.turing.katalon.plugins.assertj.StringAssert.contains"(
-    	String text	
-     , 	String subText	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).contains(
-        	text
-         , 	subText
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
-    	String actual	
-     , 	String expected	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).notEqual(
-        	actual
-         , 	expected
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
-    	String actual	
-     , 	String expected	
-     , 	boolean caseSensitive	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).notEqual(
-        	actual
-         , 	expected
-         , 	caseSensitive
-         , 	description)
-}
-
 def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
     	String actual	
      , 	String expected	
@@ -1176,25 +1154,25 @@ def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
          , 	flowControl)
 }
 
-def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
-    	String text	
-     , 	String subText	
-     , 	boolean caseSensitive	
+def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
+    	String actual	
+     , 	String expected	
      , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).notContain(
-        	text
-         , 	subText
-         , 	caseSensitive
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).notEqual(
+        	actual
+         , 	expected
          , 	description)
 }
 
-def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
-    	String text	
-     , 	String subText	
+def static "kms.turing.katalon.plugins.assertj.StringAssert.notEqual"(
+    	String actual	
+     , 	String expected	
+     , 	boolean caseSensitive	
      , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.StringAssert()).notContain(
-        	text
-         , 	subText
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).notEqual(
+        	actual
+         , 	expected
+         , 	caseSensitive
          , 	description)
 }
 
@@ -1210,6 +1188,28 @@ def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
          , 	caseSensitive
          , 	description
          , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
+    	String text	
+     , 	String subText	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).notContain(
+        	text
+         , 	subText
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.StringAssert.notContain"(
+    	String text	
+     , 	String subText	
+     , 	boolean caseSensitive	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.StringAssert()).notContain(
+        	text
+         , 	subText
+         , 	caseSensitive
+         , 	description)
 }
 
 def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isTrue"(
@@ -1232,20 +1232,20 @@ def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isTrue"(
 
 def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isFalse"(
     	boolean expression	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isFalse(
+        	expression
+         , 	description)
+}
+
+def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isFalse"(
+    	boolean expression	
      , 	String description	
      , 	FailureHandling flowControl	) {
     (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isFalse(
         	expression
          , 	description
          , 	flowControl)
-}
-
-def static "kms.turing.katalon.plugins.assertj.BooleanAssert.isFalse"(
-    	boolean expression	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.BooleanAssert()).isFalse(
-        	expression
-         , 	description)
 }
 
 def static "kms.turing.katalon.plugins.assertj.GenericAssert.isNull"(
@@ -1331,16 +1331,6 @@ def static "kms.turing.katalon.plugins.assertj.ListAssert.equalsIgnoreOrder"(
 def static "kms.turing.katalon.plugins.assertj.ListAssert.equalsWithOrder"(
     	java.util.List<Object> actual	
      , 	java.util.List<Object> expected	
-     , 	String description	) {
-    (new kms.turing.katalon.plugins.assertj.ListAssert()).equalsWithOrder(
-        	actual
-         , 	expected
-         , 	description)
-}
-
-def static "kms.turing.katalon.plugins.assertj.ListAssert.equalsWithOrder"(
-    	java.util.List<Object> actual	
-     , 	java.util.List<Object> expected	
      , 	String description	
      , 	FailureHandling flowControl	) {
     (new kms.turing.katalon.plugins.assertj.ListAssert()).equalsWithOrder(
@@ -1348,4 +1338,14 @@ def static "kms.turing.katalon.plugins.assertj.ListAssert.equalsWithOrder"(
          , 	expected
          , 	description
          , 	flowControl)
+}
+
+def static "kms.turing.katalon.plugins.assertj.ListAssert.equalsWithOrder"(
+    	java.util.List<Object> actual	
+     , 	java.util.List<Object> expected	
+     , 	String description	) {
+    (new kms.turing.katalon.plugins.assertj.ListAssert()).equalsWithOrder(
+        	actual
+         , 	expected
+         , 	description)
 }

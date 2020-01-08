@@ -1,5 +1,7 @@
 /bin/
 
+/Libs/Temp*
+/Reports/
 
 /Drivers/
 /Materials/
